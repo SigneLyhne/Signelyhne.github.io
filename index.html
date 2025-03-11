@@ -1,120 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="UX Designer Portfolio">
-    <title>UX Designer Portfolio</title>
+    <title>Signe Kloster Lyhne Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #FAF8ED;
+            text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
         }
-
         header {
-            background-color: #0077b6;
-            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
+        }
+        .profile {
             text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        section h2 {
-            font-size: 2em;
             margin-bottom: 20px;
         }
-
-        .intro, .projects, .contact {
-            margin-bottom: 40px;
+        .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
         }
-
-        .projects .project {
-            display: inline-block;
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            text-align: left;
+        .projects {
+            display: grid;
+            gap: 10px;
         }
-
-        .projects .project img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        .projects .project h3 {
-            margin: 10px 0;
-            font-size: 1.5em;
-        }
-
-        .contact a {
-            color: #0077b6;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-
-        footer {
-            background-color: #333;
+        .project {
+            display: flex;
+            align-items: center;
+            padding: 15px;
             color: white;
-            text-align: center;
-            padding: 20px;
+            font-weight: bold;
+            font-size: 1.1em;
         }
+        .project:nth-child(1) { background-color: #2CA14C; }
+        .project:nth-child(2) { background-color: #EAC82D; color: black; }
+        .project:nth-child(3) { background-color: #F5A9A5; color: black; }
+        .project:nth-child(4) { background-color: #E94F4F; }
+        .project:nth-child(5) { background-color: #2E1B25; }
+        .project:nth-child(6) { background-color: #1F3823; }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Your Name</h1>
-    <p>UX Designer | Researcher | Problem Solver</p>
-</header>
-
-<section class="intro">
-    <h2>About Me</h2>
-    <p>Hi! I'm [Your Name], a UX designer passionate about creating intuitive, accessible, and enjoyable user experiences. With a background in [Your Background], I aim to bridge the gap between technology and people.</p>
-</section>
-
-<section class="projects">
-    <h2>My Work</h2>
-    <div class="project">
-        <img src="project1.jpg" alt="Project 1">
-        <h3>Project 1</h3>
-        <p>A brief description of the project, your role, and the outcome.</p>
+    <header>
+        <div>OM MIG</div>
+        <div>KONTAKT</div>
+    </header>
+    <div class="container">
+        <div class="profile">
+            <h2>Signe Kloster Lyhne</h2>
+            <h3>Digital Altmuligkvinde</h3>
+            <p>Jeg er en nyuddannet UX & UI designer med en kandidat i Digital Design...</p>
+        </div>
+        <h2>Projekter</h2>
+        <div class="projects">
+            <div class="project">01 Danmarks Naturfredningsforening/UX & UI/SOME/VIDEO</div>
+            <div class="project">02 Danmarks Nationalbank/UX RESEARCH/BÆREDYGTIGHED</div>
+            <div class="project">03 DSB/UX & UI/UX RESEARCH/CO-DESIGN/BÆREDYGTIGHED</div>
+            <div class="project">04 TikTok/UX & UI/AI/DESIGN FOR WELLBEING</div>
+            <div class="project">05 Youtube Kids/UX & UI/CO-DESIGN/UX RESEARCH</div>
+            <div class="project">06 Danmarks Domstole/UX & UI/AI/VALUE SENSITIVE DESIGN</div>
+        </div>
     </div>
-    <div class="project">
-        <img src="project2.jpg" alt="Project 2">
-        <h3>Project 2</h3>
-        <p>A brief description of the project, your role, and the outcome.</p>
-    </div>
-    <div class="project">
-        <img src="project3.jpg" alt="Project 3">
-        <h3>Project 3</h3>
-        <p>A brief description of the project, your role, and the outcome.</p>
-    </div>
-</section>
-
-<section class="contact">
-    <h2>Contact</h2>
-    <p>If you’d like to collaborate or have any questions, feel free to reach out!</p>
-    <p><a href="mailto:youremail@example.com">Email Me</a></p>
-</section>
-
-<footer>
-    <p>&copy; 2025 [Your Name] - All rights reserved.</p>
-</footer>
-
 </body>
 </html>
