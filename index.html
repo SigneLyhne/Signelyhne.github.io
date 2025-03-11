@@ -23,10 +23,18 @@
             text-decoration: none;
             color: black;
         }
-        .container {
-            max-width: 500px;
-            margin: 40px;
+        .containerA {
+            max-width: 1000px;
+            margin: auto;
             padding: 40px;
+        }
+        .containerB {
+            max-width: 700px;
+            margin: auto;
+            padding-top: 40px;
+            padding-bottom: 0px;
+            padding-left: 40px;
+            padding-right: 40px;
         }
         .profile-container {
             display: flex;
@@ -39,18 +47,27 @@
             width: 120px;
             height: 120px;
         }
+
+        .stjerne {
+            display: block;
+            margin: auto;
+            width: 50px;
+            height: auto;
+        }
         .profile-text {
             text-align: left;
             flex-grow: 1;
         }
         .profile-text h2 {
             font-family: "Times New Roman", serif;
-            font-size: 28px;
+            font-weight: 100;
+            font-size: 44px;
             margin: 0;
         }
         .profile-text h3 {
             font-family: "Times New Roman", serif;
-            font-size: 22px;
+            font-weight: 100;
+            font-size: 26px;
             margin: 5px 0;
         }
         .profile-text p {
@@ -59,9 +76,10 @@
         }
         h2.projects-title {
             font-family: "Times New Roman", serif;
-            font-size: 26px;
+            font-weight: 100;
+            font-size: 33px;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 5px;
         }
         .projects {
             display: grid;
@@ -73,8 +91,9 @@
             align-items: center;
             padding: 50px;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 26px;
             font-family: "Times New Roman", serif;
+            font-weight: 100;
             border-radius: 5px;
         }
         .project a {
@@ -101,16 +120,20 @@
         <a href="#">OM MIG</a>
         <a href="#">KONTAKT</a>
     </header>
-    <div class="container">
+    <div class="containerB">
         <div class="profile-container">
             <div class="profile-text">
                 <h2>Signe Kloster Lyhne</h2>
-                <h3>Digital Altmuligkvinde</h3>
+                <h3>Digital designer med et grønt hjerte</h3>
                 <p>Jeg er en nyudannet UX & UI designer med en kandidat i Digitalt Design og Interaktive Teknologier fra IT Universitetet. Nedenfor er en oversigt over nogle af de projekter, som jeg har arbejdet på igennem min studietid. </p>
             </div>
             <img src="signe.png" alt="Signe Kloster Lyhne">
         </div>
-        <h2 class="projects-title">⭐ Projekter</h2>
+    </div>
+
+    <div class="containerA">
+        <img src="stjerne.png" alt="stjerne" class="stjerne">
+        <h2 class="projects-title">Projekter</h2>
         <div class="projects">
             <div class="project"><a href="#"><span>01</span>Danmarks Naturfredningsforening/UX & UI/SOME/VIDEO</a></div>
             <div class="project"><a href="#"><span>02</span>Danmarks Nationalbank/UX RESEARCH/BÆREDYGTIGHED</a></div>
