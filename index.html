@@ -13,12 +13,15 @@
         }
         header {
             display: flex;
-            justify-content: flex-end;
-            gap: 20px;
+            justify-content: center;
+            gap: 40px;
             font-family: "Helvetica Light", sans-serif;
             font-size: 16px;
             margin: 20px;
-            padding-right: 40px;
+        }
+        header a {
+            text-decoration: none;
+            color: black;
         }
         .container {
             max-width: 900px;
@@ -28,6 +31,7 @@
         .profile-container {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 20px;
         }
         .profile img {
@@ -37,6 +41,7 @@
         }
         .profile-text {
             text-align: left;
+            flex-grow: 1;
         }
         .profile-text h2 {
             font-family: "Times New Roman", serif;
@@ -72,6 +77,13 @@
             font-family: "Times New Roman", serif;
             border-radius: 5px;
         }
+        .project a {
+            text-decoration: none;
+            color: inherit;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
         .project:nth-child(1) { background-color: #2CA14C; color: white; }
         .project:nth-child(2) { background-color: #EAC82D; color: black; }
         .project:nth-child(3) { background-color: #F5A9A5; color: black; }
@@ -86,26 +98,26 @@
 </head>
 <body>
     <header>
-        <div>OM MIG</div>
-        <div>KONTAKT</div>
+        <a href="#">OM MIG</a>
+        <a href="#">KONTAKT</a>
     </header>
     <div class="container">
         <div class="profile-container">
-            <img src="profile.jpg" alt="Signe Kloster Lyhne">
             <div class="profile-text">
                 <h2>Signe Kloster Lyhne</h2>
                 <h3>Digital Altmuligkvinde</h3>
                 <p>Jeg er en nyuddannet UX & UI designer med en kandidat i Digital Design...</p>
             </div>
+            <img src="profile.jpg" alt="Signe Kloster Lyhne">
         </div>
         <h2 class="projects-title">⭐ Projekter</h2>
         <div class="projects">
-            <div class="project"><span>01</span>Danmarks Naturfredningsforening/UX & UI/SOME/VIDEO</div>
-            <div class="project"><span>02</span>Danmarks Nationalbank/UX RESEARCH/BÆREDYGTIGHED</div>
-            <div class="project"><span>03</span>DSB/UX & UI/UX RESEARCH/CO-DESIGN/BÆREDYGTIGHED</div>
-            <div class="project"><span>04</span>TikTok/UX & UI/AI/DESIGN FOR WELLBEING</div>
-            <div class="project"><span>05</span>Youtube Kids/UX & UI/CO-DESIGN/UX RESEARCH</div>
-            <div class="project"><span>06</span>Danmarks Domstole/UX & UI/AI/VALUE SENSITIVE DESIGN</div>
+            <div class="project"><a href="#"><span>01</span>Danmarks Naturfredningsforening/UX & UI/SOME/VIDEO</a></div>
+            <div class="project"><a href="#"><span>02</span>Danmarks Nationalbank/UX RESEARCH/BÆREDYGTIGHED</a></div>
+            <div class="project"><a href="#"><span>03</span>DSB/UX & UI/UX RESEARCH/CO-DESIGN/BÆREDYGTIGHED</a></div>
+            <div class="project"><a href="#"><span>04</span>TikTok/UX & UI/AI/DESIGN FOR WELLBEING</a></div>
+            <div class="project"><a href="#"><span>05</span>Youtube Kids/UX & UI/CO-DESIGN/UX RESEARCH</a></div>
+            <div class="project"><a href="#"><span>06</span>Danmarks Domstole/UX & UI/AI/VALUE SENSITIVE DESIGN</a></div>
         </div>
     </div>
 </body>
