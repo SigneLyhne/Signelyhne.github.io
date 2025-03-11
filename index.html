@@ -6,7 +6,7 @@
     <title>Signe Kloster Lyhne Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Helvetica Light", Arial, sans-serif;
             background-color: #FAF8ED;
             text-align: center;
             margin: 0;
@@ -14,8 +14,11 @@
         }
         header {
             display: flex;
-            justify-content: space-between;
-            padding: 10px 20px;
+            justify-content: center;
+            gap: 20px;
+            font-family: "Times New Roman", serif;
+            font-size: 14px;
+            margin-top: 10px;
         }
         .container {
             max-width: 800px;
@@ -31,24 +34,34 @@
             width: 100px;
             height: 100px;
         }
+        .profile h2, .profile h3 {
+            font-family: "Times New Roman", serif;
+            font-weight: normal;
+        }
         .projects {
             display: grid;
             gap: 10px;
+            margin-top: 20px;
         }
         .project {
             display: flex;
             align-items: center;
             padding: 15px;
-            color: white;
             font-weight: bold;
             font-size: 1.1em;
+            font-family: "Times New Roman", serif;
         }
-        .project:nth-child(1) { background-color: #2CA14C; }
+        .project:nth-child(1) { background-color: #2CA14C; color: white; }
         .project:nth-child(2) { background-color: #EAC82D; color: black; }
         .project:nth-child(3) { background-color: #F5A9A5; color: black; }
-        .project:nth-child(4) { background-color: #E94F4F; }
-        .project:nth-child(5) { background-color: #2E1B25; }
-        .project:nth-child(6) { background-color: #1F3823; }
+        .project:nth-child(4) { background-color: #E94F4F; color: white; }
+        .project:nth-child(5) { background-color: #2E1B25; color: white; }
+        .project:nth-child(6) { background-color: #1F3823; color: white; }
+        .project span {
+            margin-right: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -62,14 +75,14 @@
             <h3>Digital Altmuligkvinde</h3>
             <p>Jeg er en nyuddannet UX & UI designer med en kandidat i Digital Design...</p>
         </div>
-        <h2>Projekter</h2>
+        <h2>⭐ Projekter</h2>
         <div class="projects">
-            <div class="project">01 Danmarks Naturfredningsforening/UX & UI/SOME/VIDEO</div>
-            <div class="project">02 Danmarks Nationalbank/UX RESEARCH/BÆREDYGTIGHED</div>
-            <div class="project">03 DSB/UX & UI/UX RESEARCH/CO-DESIGN/BÆREDYGTIGHED</div>
-            <div class="project">04 TikTok/UX & UI/AI/DESIGN FOR WELLBEING</div>
-            <div class="project">05 Youtube Kids/UX & UI/CO-DESIGN/UX RESEARCH</div>
-            <div class="project">06 Danmarks Domstole/UX & UI/AI/VALUE SENSITIVE DESIGN</div>
+            <div class="project"><span>01</span>Danmarks Naturfredningsforening/UX & UI/SOME/VIDEO</div>
+            <div class="project"><span>02</span>Danmarks Nationalbank/UX RESEARCH/BÆREDYGTIGHED</div>
+            <div class="project"><span>03</span>DSB/UX & UI/UX RESEARCH/CO-DESIGN/BÆREDYGTIGHED</div>
+            <div class="project"><span>04</span>TikTok/UX & UI/AI/DESIGN FOR WELLBEING</div>
+            <div class="project"><span>05</span>Youtube Kids/UX & UI/CO-DESIGN/UX RESEARCH</div>
+            <div class="project"><span>06</span>Danmarks Domstole/UX & UI/AI/VALUE SENSITIVE DESIGN</div>
         </div>
     </div>
 </body>
