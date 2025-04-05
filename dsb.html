@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signe Kloster Lyhne Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Avenir:wght@300;400;700&display=swap');
+
+        body {
+            font-family: "Helvetica", Arial, sans-serif;
+            background-color: #fffdf5;
+            margin: 0;
+            padding: 0;
+            font-weight: 200;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 12px;
+            margin: 20px;
+            font-family: "Avenir", sans-serif;
+            font-weight: 400;
+            color: #394f3e;
+            opacity: 50%;
+        }
+        header a {
+            text-decoration: none;
+            color: black;
+        }
+        .containerA {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px;
+        }
+        .containerB {
+            max-width: 600px;
+            margin: auto;
+            padding-top: 40px;
+            padding-bottom: 0px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        .profile-text h1 {
+    font-family: "Avenir", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    line-height: 1.5;
+    text-align: center;
+}
+
+        .profile-text h2 {
+            font-family: "Avenir", sans-serif;
+            font-weight: 400;
+            font-size: 36px;
+            color: #7f3030;
+            margin: 5px 0;
+            text-align:center;
+        }
+        .profile-text p {
+            font-size: 14px;
+            margin-top: 10px;
+            letter-spacing: 1px;
+            line-height: 20px;
+        }
+
+        .centered-image {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%; /* Ensures responsiveness */
+        height: auto;
+        width: 20%;
+        }
+        .centered-image2 {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%; /* Ensures responsiveness */
+        height: auto;
+        width: 100%;
+        }
+
+    
+        .projects-section {
+            background-color: #7f3030;
+            padding: 50px 0;
+            text-align: center;
+            color: #fffdf5;  
+        }
+        .projects-section-text {
+        max-width: 600px; /* Match containerB */
+        margin: auto; /* Center align it */
+        text-align: left;
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 20px;
+        padding: 40px; 
+        }
+        .projects-title {
+            font-family: "Avenir", sans-serif;
+            font-weight: 500;
+            font-size: 30px;
+            text-align: center; 
+        }
+
+
+        .centered-image2:hover {
+            transform: scale(1.1);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="VILD.html">FORRIGE PROJEKT</a>
+        <a href="hjem.html">HJEM</a>
+        <a href="belidside.html">NÆSTE PROJEKT</a>
+    </header>
+    
+    <div class="containerB">
+        <div class="profile-container">
+            <div class="profile-text">
+                <img src="dsblogo.png" alt="Description of image" class="centered-image">
+                <h1>Speciale: DSB</h1>
+                <br>
+                <p>I dette projekt udforsker jeg og min specialemakker mulighederne for at understøtte bæredygtig adfærd med digtiale produkter. Helt konkret går vores projekt ud på at optimere og nytænke køb af togbilletter på DSB’s udlandsplatform i samarbejde med vores målgruppe.</p>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+
+    <div class="projects-section">
+        <div class="projects-section-text">
+            <h2 class="projects-title">UX-research</h2>
+            <p>Vores research process bestod bl.a. i at udføre en række interviews, hvorefter vi definerede 3 distinke databaserede personaer, som vi kunne bruge i vores designarbejde.</p>
+            <br>
+            <img src="dsbpersona.jpg" alt="DSB personaer" class="centered-image2" onclick="openModal('dsbpersona.jpg')">
+          <div id="modal" class="modal">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <img id="modal-image" src="">
+          </div>
+
+        <br><br>
+
+        <div class="projects-section-text">
+            <h2 class="projects-title">Design-workshop</h2>
+              <p>Målet om at skabe en løsning i samarbejde med målgruppen resulterede i en design-workshop, hvor deltagerne udviklede koncepter vha. legklodser og legetøjstogbaner.</p>
+             <br>
+              <img src="workshop.png" alt="workshop" class="centered-image2" onclick="openModal('workshop.png')">
+          <div id="modal" class="modal">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <img id="modal-image" src="">
+          </div>
+          </div>
+
+          <div class="projects-section-text">
+            <h2 class="projects-title">Next steps</h2>
+            <p>Næste skridt i vores projekt bliver at udvilke og iterere på en række prototyper, som vi kommer til at lave på papir og senere i Figma.</p>
+            <br>
+          </div>
+
+          <br><br><br><br>
+
+        </div>
+    </div>
+    <br><br>
+    <header>
+        <a href="VILD.html">FORRIGE PROJEKT</a>
+        <a href="hjem.html">HJEM</a>
+        <a href="belidside.html">NÆSTE PROJEKT</a>
+    </header>
+<br><br>
+
+<script>
+    function openModal(imageSrc) {
+        document.getElementById('modal-image').src = imageSrc;
+        document.getElementById('modal').style.display = 'flex';
+    }
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+</script>
+
+
+</body>
+</html>

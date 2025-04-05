@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signe Kloster Lyhne Portfolio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Avenir:wght@300;400;700&display=swap');
+
         body {
-            font-family: "Helvetica Light", Arial, sans-serif;
-            background-color: #FAF8ED;
+            font-family: "Helvetica", Arial, sans-serif;
+            background-color: #fffdf5;
             margin: 0;
             padding: 0;
+            font-weight: 200;
         }
         header {
             display: flex;
             justify-content: center;
             gap: 40px;
-            font-family: "Helvetica Light", sans-serif;
-            font-size: 16px;
+            font-size: 12px;
             margin: 20px;
+            font-family: "Avenir", sans-serif;
+            font-weight: 400;
+            color: #394f3e;
+            opacity: 50%;
         }
         header a {
             text-decoration: none;
@@ -29,7 +35,7 @@
             padding: 40px;
         }
         .containerB {
-            max-width: 700px;
+            max-width: 800px;
             margin: auto;
             padding-top: 40px;
             padding-bottom: 0px;
@@ -42,77 +48,205 @@
             justify-content: space-between;
             gap: 20px;
         }
+        
         .profile img {
             border-radius: 50%;
-            width: 120px;
-            height: 120px;
-        }
-
-        .stjerne {
-            display: block;
-            margin: auto;
             width: 50px;
-            height: auto;
+            height: 50px;
         }
-        .profile-text {
-            text-align: left;
-            flex-grow: 1;
-        }
+        .profile-text h1 {
+    font-family: "Avenir", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    line-height: 1.5;
+    text-align: left;
+    display: inline-block; /* Ensure the span is inline within the h1 */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+}
+
+#dynamic-text {
+    display: inline-block; /* To ensure it's part of the flow and can transition */
+    opacity: 1; /* Initial opacity */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+}
         .profile-text h2 {
-            font-family: "Times New Roman", serif;
-            font-weight: 100;
-            font-size: 44px;
-            margin: 0;
-        }
-        .profile-text h3 {
-            font-family: "Times New Roman", serif;
-            font-weight: 100;
-            font-size: 26px;
+            font-family: "Avenir", sans-serif;
+            font-weight: 400;
+            font-size: 36px;
+            color: #394f3e;
             margin: 5px 0;
+            text-align:center;
         }
         .profile-text p {
-            font-size: 16px;
+            font-size: 14px;
             margin-top: 10px;
+            letter-spacing: 1px;
+            line-height: 20px;
         }
-        h2.projects-title {
-            font-family: "Times New Roman", serif;
-            font-weight: 100;
-            font-size: 33px;
+
+        /* Adding background image behind the last word of h1 */
+        .profile-text h1::after {
+            content: "";
+            position: absolute;
+            bottom: 2px; /* Adjust the position of the vector */
+            right: 0;
+            left: 225px;
+            width: 500px; /* Adjust the width of the yellow vector */
+            height: 50px; /* Adjust the height of the yellow vector */
+            background-image: url('vector.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1; /* Place the vector behind the text */
+        }
+
+    
+        .projects-section {
+            background-color: #ffca73;
+            padding: 50px 0;
             text-align: center;
-            margin-top: 5px;
         }
-        .projects {
-            display: grid;
-            gap: 15px;
-            margin-top: 20px;
+        .projects-title {
+            font-family: "Avenir", sans-serif;
+            font-weight: 500;
+            font-size: 30px;
         }
+        .projects-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 1300px;
+        margin: auto;
+        padding: 20px;
+    }
+        
+        /* New Project Container */
         .project {
+        flex: 1 1 calc(33.333% - 20px); /* 3 items per row on large screens */
+        max-width: calc(33.333% - 20px);
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        height: 100%;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    }
+
+    .project:hover {
+    transform: scale(1.05); /* Slightly enlarge the container */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Add shadow for depth */
+}
+
+
+    .project .text-content h3,
+    .project .text-content p {
+        text-align: left; /* Align heading and description to the left */
+    }
+
+    @media (max-width: 900px) {
+        .project {
+            flex: 1 1 calc(50% - 20px); /* 2 items per row on medium screens */
+            max-width: calc(50% - 20px);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .project {
+            flex: 1 1 100%; /* 1 item per row on small screens */
+            max-width: 100%;
+        }
+    }
+
+    .project .image-container img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Ensures images fill the space */
+    display: block;
+}
+
+        .project .text-box {
             display: flex;
             align-items: center;
-            padding: 50px;
-            font-weight: bold;
-            font-size: 26px;
-            font-family: "Times New Roman", serif;
-            font-weight: 100;
-            border-radius: 5px;
+            background-color: #394f3e;
+            padding: 20px;
+            color: white;
         }
-        .project a {
-            text-decoration: none;
-            color: inherit;
-            width: 100%;
-            display: flex;
-            align-items: center;
+
+        .project .logo {
+            width: 60px;
+            margin-right: 20px;
         }
-        .project:nth-child(1) { background-color: #37b65b; color: #f4f4e6; }
-        .project:nth-child(2) { background-color: #f8d65b; color: #1c2e22; }
-        .project:nth-child(3) { background-color: #f6bcb1; color: #1c2e22; }
-        .project:nth-child(4) { background-color: #e75c5b; color: #f4f4e6; }
-        .project:nth-child(5) { background-color: #3c2a38; color: #f4f4e6; }
-        .project:nth-child(6) { background-color: #1c2e22; color: #f4f4e6; }
-        .project span {
-            margin-right: 15px;
-            font-size: 22px;
+
+        .project .text-content h3 {
+            font-family: "Avenir", sans-serif;
+            font-size: 20px;
+            margin: 0;
+            font-weight: 400;
         }
+
+        .project .text-content p {
+            font-size: 14px;
+            margin: 5px 0 0;
+            color: white;
+        }
+
+        .project:nth-child(1) .text-box {
+    background-color: #394f3e; /* Dark green */
+    color: #fffcf4;
+}
+
+.project:nth-child(2) .text-box {
+    background-color: #3c2a38; /* Purple */
+    color: #fffcf4;
+}
+
+.project:nth-child(3) .text-box {
+    background-color: #fffcf4; /* white */
+    color: #1c2e22;
+}
+.project:nth-child(3) .text-content p {
+    color: #1c2e22;
+}
+
+.project:nth-child(4) .text-box {
+    background-color: #2b5468; /* Blue */
+    color: #fffcf4;
+}
+.project:nth-child(5) .text-box {
+    background-color: #fffcf4; /* white */
+    color: #1c2e22;
+}
+.project:nth-child(5) .text-content p {
+    color: #1c2e22;
+}
+
+.project:nth-child(6) .text-box {
+    background-color: #394f3e; /* Dark green */
+    color: #fffcf4;
+}
+
+.project:nth-child(7) .text-box {
+    background-color: #3c2a38; /* Purple */
+    color: #fffcf4;
+}
+
+.project:nth-child(8) .text-box {
+    background-color: #2b5468; /* Blue */
+    color: #fffcf4;
+}
+
+.project:nth-child(9) .text-box {
+    background-color: #3c2a38; /* Purple */
+    color: #fffcf4;
+}
+
+
+
     </style>
 </head>
 <body>
@@ -120,28 +254,172 @@
         <a href="#">OM MIG</a>
         <a href="#">KONTAKT</a>
     </header>
+    
     <div class="containerB">
         <div class="profile-container">
             <div class="profile-text">
-                <h2>Signe Kloster Lyhne</h2>
-                <h3>Digital designer med et grønt hjerte</h3>
-                <p>Jeg er en nyudannet UX & UI designer med en kandidat i Digitalt Design og Interaktive Teknologier fra IT Universitetet. Nedenfor er en oversigt over nogle af de projekter, som jeg har arbejdet på igennem min studietid. </p>
+                <h1>Hej! Jeg laver <span id="dynamic-text">grafik</span></h1>
+                <p>Mit navn er Signe Lyhne, og jeg er en <strong>digital schweizerkniv</strong> med en kandidat i Digitalt Design og Interaktive Teknologier fra IT Universitetet. Nedenfor er en oversigt over nogle af de projekter, som jeg har arbejdet på igennem min studietid. </p>
             </div>
-            <img src="signe.png" alt="Signe Kloster Lyhne">
+            <img src="signe.png" alt="Signe Kloster Lyhne" style="width: 35%; z-index: +1;">
         </div>
+        <br><br><br>
     </div>
 
-    <div class="containerA">
-        <img src="stjerne.png" alt="stjerne" class="stjerne">
-        <h2 class="projects-title">Projekter</h2>
-        <div class="projects">
-            <div class="project"><a href="#"><span>01</span>Danmarks Naturfredningsforening/UX & UI/SOME/VIDEO</a></div>
-            <div class="project"><a href="#"><span>02</span>Danmarks Nationalbank/UX RESEARCH/BÆREDYGTIGHED</a></div>
-            <div class="project"><a href="#"><span>03</span>DSB/UX & UI/UX RESEARCH/CO-DESIGN/BÆREDYGTIGHED</a></div>
-            <div class="project"><a href="#"><span>04</span>TikTok/UX & UI/AI/DESIGN FOR WELLBEING</a></div>
-            <div class="project"><a href="#"><span>05</span>Youtube Kids/UX & UI/CO-DESIGN/UX RESEARCH</a></div>
-            <div class="project"><a href="#"><span>06</span>Danmarks Domstole/UX & UI/AI/VALUE SENSITIVE DESIGN</a></div>
+    <div class="projects-section">
+        <h2 class="projects-title">Mine projekter</h2>
+        <div class="projects-grid">
+            <a href="dsb.html" class="project">
+                <div class="image-container">
+                    <img src="dsbbg.png" alt="Train on a bridge">
+                </div>
+                <div class="text-box">
+                    <img src="dsblogo.png"4 alt="DSB Logo" class="logo">
+                    <div class="text-content">
+                        <h3>Speciale: DSB</h3>
+                        <p>UX design, co-design, bæredygtighed</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="belidside.html" class="project">
+                <div class="image-container">
+                    <img src="belidbg.png" alt="BELID">
+                </div>
+                <div class="text-box">
+                    <img src="belidlogo.png" alt="BELID Logo" class="logo">
+                    <div class="text-content">
+                        <h3>BELID: Døgnrytmelamper</h3>
+                        <p>Illustration og salgsvideoer</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Nationalbanken.html" class="project">
+                <div class="image-container">
+                    <img src="dnbbg.png" alt="Nationalbank">
+                </div>
+                <div class="text-box">
+                    <img src="dnblogo.png" alt="Nationalbank Logo" class="logo">
+                    <div class="text-content">
+                        <h3>Danmarks Nationalbank</h3>
+                        <p>Persona, innovation og bæredygtighed</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="naturfamilier.html" class="project">
+                <div class="image-container">
+                    <img src="nfbg.png" alt="Naturfamilier">
+                </div>
+                <div class="text-box">
+                    <img src="nflogo.png" alt="Naturfamilier Logo" class="logo">
+                    <div class="text-content">
+                        <h3>Naturfamilier</h3>
+                        <p>Kampagne, video, grafik, rapportopsætning</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="tidtiltur.html" class="project">
+                <div class="image-container">
+                    <img src="tttbg.png" alt="Tid til Tur">
+                </div>
+                <div class="text-box">
+                    <img src="tttlogo.png" alt="Tid til Tur Logo" class="logo">
+                    <div class="text-content">
+                        <h3>Tid til Tur</h3>
+                        <p>Grafik, dokumentopsætning, web</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Naturensuge.html" class="project">
+                <div class="image-container">
+                    <img src="nubg.png" alt="Naturens Uge">
+                </div>
+                <div class="text-box">
+                    <img src="nulogo.png" alt="Naturens Uge Logo" class="logo">
+                    <div class="text-content">
+                        <h3>Naturens Uge</h3>
+                        <p>Grafik, illustration, video, web</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="affaldsindsamlingen.html" class="project">
+                <div class="image-container">
+                    <img src="aibg.png" alt="Naturens Uge">
+                </div>
+                <div class="text-box">
+                    <img src="ailogo.png" alt="Naturens Uge Logo" class="logo">
+                    <div class="text-content">
+                        <h3>Affaldsindsamlingen</h3>
+                        <p>UX design, grafik, illustration, video, web</p>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="vilderodder.html" class="project">
+                <div class="image-container">
+                    <img src="vrbg.png" alt="Naturens Uge">
+                </div>
+                <div class="text-box">
+                    <img src="vrlogo.png" alt="Naturens Uge Logo" class="logo">
+                    <div class="text-content">
+                        <h3>Vilde Rødder</h3>
+                        <p>SoMe, grafik, illustration, web, foto</p>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="VILD.html" class="project">
+                <div class="image-container">
+                    <img src="vildbg.png" alt="Naturens Uge">
+                </div>
+                <div class="text-box">
+                    <img src="vildlogo.png" alt="Naturens Uge Logo" class="logo">
+                    <div class="text-content">
+                        <h3>VILD</h3>
+                        <p>UX design, grafik, illustration, video, web</p>
+                    </div>
+                </div>
+            </a>
+
+
+
+
         </div>
+
+        <br><br><br><br>
     </div>
+
+    <script>
+        // Array of words to rotate through
+        const words = ['grafik', 'illustration', 'video', 'web', 'UX design'];
+        let currentIndex = 0;
+        const dynamicTextElement = document.getElementById('dynamic-text');
+    
+        // Function to change the text content with smooth transition
+        function changeText() {
+            dynamicTextElement.style.opacity = 0; // Fade out the current text
+    
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % words.length; // Cycle through the array
+                dynamicTextElement.textContent = words[currentIndex];
+    
+                // After the opacity transition, fade in the new text
+                dynamicTextElement.style.opacity = 1;
+            }, 1000); // Timeout should match the transition duration (1s)
+        }
+    
+        // Set an interval to change the text every 3 seconds
+        setInterval(changeText, 3000); // 3000ms = 3 seconds
+    </script>
+    
+
+
 </body>
 </html>

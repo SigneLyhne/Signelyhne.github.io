@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signe Kloster Lyhne Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Avenir:wght@300;400;700&display=swap');
+
+        body {
+            font-family: "Helvetica", Arial, sans-serif;
+            background-color: #fffdf5;
+            margin: 0;
+            padding: 0;
+            font-weight: 200;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 12px;
+            margin: 20px;
+            font-family: "Avenir", sans-serif;
+            font-weight: 400;
+            color: #394f3e;
+            opacity: 50%;
+        }
+        header a {
+            text-decoration: none;
+            color: black;
+        }
+        .containerA {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px;
+        }
+        .containerB {
+            max-width: 600px;
+            margin: auto;
+            padding-top: 40px;
+            padding-bottom: 0px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        .profile-text h1 {
+    font-family: "Avenir", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    line-height: 1.5;
+    text-align: center;
+}
+
+        .profile-text h2 {
+            font-family: "Avenir", sans-serif;
+            font-weight: 400;
+            font-size: 36px;
+            color: #394f3e;
+            margin: 5px 0;
+            text-align:center;
+        }
+        .profile-text p {
+            font-size: 14px;
+            margin-top: 10px;
+            letter-spacing: 1px;
+            line-height: 20px;
+        }
+
+        .centered-image {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%; /* Ensures responsiveness */
+        height: auto;
+        width: 20%;
+        }
+        .centered-image2 {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%; /* Ensures responsiveness */
+        height: auto;
+        width: 70%;
+        }
+
+    
+        .projects-section {
+            background-color: #5e6f79;
+            padding: 50px 0;
+            text-align: center;
+            color: #fffdf5;  
+        }
+        .projects-section-text {
+        max-width: 600px; /* Match containerB */
+        margin: auto; /* Center align it */
+        text-align: left;
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 20px;
+        padding: 40px; 
+        }
+        .projects-title {
+            font-family: "Avenir", sans-serif;
+            font-weight: 500;
+            font-size: 30px;
+            text-align: center; 
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">FORRIGE PROJEKT</a>
+        <a href="Test.html">HJEM</a>
+        <a href="#">NÆSTE PROJEKT</a>
+    </header>
+    
+    <div class="containerB">
+        <div class="profile-container">
+            <div class="profile-text">
+                <img src="lampe.png" alt="Description of image" class="centered-image">
+                <h1>BELID: Døgnrytmelamper</h1>
+                <br>
+                <p>BELID lighting har i samarbejde med Københavns plejehjem udviklet en serie af intelligente døgrytmelamper. I forbindelse med opsætningen af lamperne, havde de brug for instruktionsvideoer til personalet og præsentationssvideoer til deres salgsteam. </p>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+
+    <div class="projects-section">
+        <div class="projects-section-text">
+          <h2 class="projects-title">Videoproduktion</h2>
+            <p>I dette projekt har jeg arbejdet med konceptudvikling, optagelser, klip, illustrationer og voice-over.</p>
+        </div>
+        <video width="600" controls>
+            <source src="belidvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <br><br>
+
+        <div class="projects-section-text">
+            <h2 class="projects-title">Illustration</h2>
+              <p>Udfordringen i dette projekt bestod primært i at kommunikere komplicerede videnskabelige koncepter i simple forståelige illustrationer.  </p>
+              <img src="sol.png" alt="Description of image" class="centered-image2">
+              <img src="øje.png" alt="Description of image" class="centered-image2">
+          </div>
+
+          <br><br><br><br>
+
+        </div>
+    </div>
+    <br><br>
+    <header>
+        <a href="dsb.html">FORRIGE PROJEKT</a>
+        <a href="Test.html">HJEM</a>
+        <a href="Nationalbanken.html">NÆSTE PROJEKT</a>
+    </header>
+<br><br>
+</body>
+</html>
